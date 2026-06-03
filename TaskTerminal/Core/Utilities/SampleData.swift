@@ -149,4 +149,25 @@ struct SampleData {
         
         return workspace
     }
+    
+    static func previewContainer() throws -> ModelContainer {
+        let schema = Schema([
+            User.self,
+            Workspace.self,
+            WorkspaceMembership.self,
+            WorkspaceTask.self
+        ])
+
+        let configuration = ModelConfiguration(
+            schema: schema,
+            isStoredInMemoryOnly: true
+        )
+
+        let container = try! ModelContainer(
+            for: schema,
+            configurations: [configuration]
+        )
+        
+        return container
+    }
 }
