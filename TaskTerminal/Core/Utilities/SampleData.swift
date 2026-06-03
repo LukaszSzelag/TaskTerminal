@@ -150,7 +150,7 @@ struct SampleData {
         return workspace
     }
     
-    static func previewContainer() throws -> ModelContainer {
+    static func previewContainer() -> ModelContainer {
         let schema = Schema([
             User.self,
             Workspace.self,

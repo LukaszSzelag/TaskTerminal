@@ -15,6 +15,7 @@ struct WorkspaceRowView: View {
 }
 
 #Preview {
-    
+    let container = SampleData.previewContainer()
     WorkspaceRowView()
+        .modelContainer(container)
 }
